@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation - Sultan's Feast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <video class="header-video" autoplay muted loop playsinline>
+            <source src="videoplayback.mp4" type="video/mp4">
+        </video>
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <div class="logo">
+                <h1>Sultan's Feast</h1>
+                <p><em>The Best Restorant</em></p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h2>Book a Table</h2>
+        
+        <form id="reservation-form" action="#" method="post">
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required placeholder="Your name">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="your@email.com">
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" placeholder="01234567890">
+            </fieldset>
+
+            <fieldset>
+                <legend>Reservation Details</legend>
+                
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+                
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" name="guests" min="1" max="20" value="2">
+                
+                <label for="table">Table Preference:</label>
+                <input list="tables" id="table" name="table" placeholder="Choose or type">
+                <datalist id="tables">
+                    <option value="Window Seat">
+                    <option value="Garden View">
+                    <option value="Private Booth">
+                    <option value="Bar Area">
+                </datalist>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Options</legend>
+                
+                <p>Seating:</p>
+                <label><input type="radio" name="seating" value="indoor" checked> Indoor</label>
+                <label><input type="radio" name="seating" value="outdoor"> Outdoor</label>
+                
+                <p>Occasion:</p>
+                <label><input type="checkbox" name="occasion" value="birthday"> Birthday</label>
+                <label><input type="checkbox" name="occasion" value="anniversary"> Anniversary</label>
+                <label><input type="checkbox" name="occasion" value="business"> Business</label>
+                
+                <label for="requests">Special Requests:</label>
+                <textarea id="requests" name="requests" rows="4" cols="50" placeholder="Any special requirements..."></textarea>
+            </fieldset>
+
+            <button type="submit" class="btn">Confirm Reservation</button>
+            <button type="reset" class="btn-secondary">Clear Form</button>
+        </form>
+
+        <div id="confirmation" class="hidden">
+            <h3>Reservation Confirmed!</h3>
+            <p>Thank you <output id="confirm-name"></output>, your table is reserved.</p>
+            <p>Date: <output id="confirm-date"></output> at <output id="confirm-time"></output></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sultan's Feast</p>
+    </footer>
+
+    <script src="js/reservation.js"></script>
+</body>
+</html>

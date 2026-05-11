@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu - Sultan's Feast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <video class="header-video" autoplay muted loop playsinline>
+            <source src="videoplayback.mp4" type="video/mp4">
+        </video>
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <div class="logo">
+                <h1>Sultan's Feast</h1>
+                <p><em>The Best Restorant</em></p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h2>Our Menu</h2>
+        
+        <div class="filter-section">
+            <label for="search">Search dishes:</label>
+            <input type="text" id="search" placeholder="Type to search...">
+            
+            <label for="category">Category:</label>
+            <select id="category">
+                <option value="all">All</option>
+                <option value="appetizer">Appetizers</option>
+                <option value="main">Main Course</option>
+                <option value="dessert">Desserts</option>
+            </select>
+        </div>
+
+        <div class="dishes-grid">
+            <article class="dish-card" data-category="appetizer">
+                <figure>
+                    <img src="Hummus.webp" alt="Hummus" width="300" height="200">
+                    <figcaption>Hummus - $6</figcaption>
+                </figure>
+                <p>Creamy chickpea dip with olive oil</p>
+                <button class="add-btn">Add to Order</button>
+            </article>
+            
+            <article class="dish-card" data-category="appetizer">
+                <figure>
+                    <img src="falafel.jpg" alt="Falafel" width="300" height="200">
+                    <figcaption>Falafel - $5</figcaption>
+                </figure>
+                <p>Crispy chickpea fritters</p>
+                <button class="add-btn">Add to Order</button>
+            </article>
+            
+            <article class="dish-card" data-category="main">
+                <figure>
+                    <img src="kofta.jpg" alt="Grilled Kofta" width="300" height="200">
+                    <figcaption>Grilled Kofta - $15</figcaption>
+                </figure>
+                <p>Spiced lamb with rice</p>
+                <button class="add-btn">Add to Order</button>
+            </article>
+            
+            <article class="dish-card" data-category="main">
+                <figure>
+                    <img src="shawarma.jpg" alt="Chicken Shawarma" width="300" height="200">
+                    <figcaption>Chicken Shawarma - $12</figcaption>
+                </figure>
+                <p>Marinated chicken wrap</p>
+                <button class="add-btn">Add to Order</button>
+            </article>
+            
+            <article class="dish-card" data-category="main">
+                <figure>
+                    <img src="Mix Grill.webp" alt="Mix Grill" width="300" height="200">
+                    <figcaption>Mix Grill - $22</figcaption>
+                </figure>
+                <p>Assorted grilled meats</p>
+                <button class="add-btn">Add to Order</button>
+            </article>
+            
+            <article class="dish-card" data-category="dessert">
+                <figure>
+                    <img src="Baklava.webp" alt="Baklava" width="300" height="200">
+                    <figcaption>Baklava - $8</figcaption>
+                </figure>
+                <p>Sweet pastry with nuts</p>
+                <button class="add-btn">Add to Order</button>
+            </article>
+            
+            <article class="dish-card" data-category="dessert">
+                <figure>
+                    <img src="Kunafa.webp" alt="Kunafa" width="300" height="200">
+                    <figcaption>Kunafa - $9</figcaption>
+                </figure>
+                <p>Cheese pastry with syrup</p>
+                <button class="add-btn">Add to Order</button>
+            </article>
+        </div>
+
+        <table class="menu-table">
+            <caption>Complete Menu List</caption>
+            <colgroup>
+                <col style="width: 30%;">
+                <col style="width: 40%;">
+                <col style="width: 15%;">
+                <col style="width: 15%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Dish Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="menu-body">
+                <tr data-category="appetizer">
+                    <td>Hummus</td>
+                    <td>Creamy chickpea dip with olive oil</td>
+                    <td>$6</td>
+                    <td><button class="add-btn">Add</button></td>
+                </tr>
+                <tr data-category="appetizer">
+                    <td>Falafel</td>
+                    <td>Crispy chickpea fritters</td>
+                    <td>$5</td>
+                    <td><button class="add-btn">Add</button></td>
+                </tr>
+                <tr data-category="main">
+                    <td>Grilled Kofta</td>
+                    <td>Spiced lamb with rice</td>
+                    <td>$15</td>
+                    <td><button class="add-btn">Add</button></td>
+                </tr>
+                <tr data-category="main">
+                    <td>Chicken Shawarma</td>
+                    <td>Marinated chicken wrap</td>
+                    <td>$12</td>
+                    <td><button class="add-btn">Add</button></td>
+                </tr>
+                <tr data-category="main">
+                    <td>Mix Grill</td>
+                    <td>Assorted grilled meats</td>
+                    <td>$22</td>
+                    <td><button class="add-btn">Add</button></td>
+                </tr>
+                <tr data-category="dessert">
+                    <td>Baklava</td>
+                    <td>Sweet pastry with nuts</td>
+                    <td>$8</td>
+                    <td><button class="add-btn">Add</button></td>
+                </tr>
+                <tr data-category="dessert">
+                    <td>Kunafa</td>
+                    <td>Cheese pastry with syrup</td>
+                    <td>$9</td>
+                    <td><button class="add-btn">Add</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <section class="order-summary">
+            <h3>Your Order</h3>
+            <ul id="order-list"></ul>
+            <p>Total: $<span id="total">0</span></p>
+            <meter id="budget" min="0" max="50" low="10" high="40" optimum="25" value="0">$0</meter>
+            <small>Budget meter (max $50)</small>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sultan's Feast</p>
+    </footer>
+
+    <script src="menu.js"></script>
+</body>
+</html>
